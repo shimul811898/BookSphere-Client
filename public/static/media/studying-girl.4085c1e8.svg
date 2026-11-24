@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Glow -->
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Girl Hair Gradient -->
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a2810" />
+      <stop offset="100%" stop-color="#2c1810" />
+    </linearGradient>
+
+    <!-- Sweater Gradient -->
+    <linearGradient id="sweaterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#7e22ce" />
+    </linearGradient>
+
+    <!-- Desk Gradient -->
+    <linearGradient id="deskGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+
+    <!-- Lamp Glow -->
+    <linearGradient id="lampLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#fef08a" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Shadows -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1e1b4b" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Backdrop -->
+  <circle cx="300" cy="250" r="210" fill="url(#bgGlow)" />
+  <circle cx="100" cy="140" r="8" fill="#c084fc" opacity="0.6" />
+  <circle cx="500" cy="120" r="12" fill="#818cf8" opacity="0.5" />
+  <circle cx="520" cy="300" r="6" fill="#f472b6" opacity="0.6" />
+  
+  <!-- Floating Sparkles -->
+  <path d="M480 80 L483 89 L492 92 L483 95 L480 104 L477 95 L468 92 L477 89 Z" fill="#fbbf24" />
+  <path d="M130 180 L132 186 L138 188 L132 190 L130 196 L128 190 L122 188 L128 186 Z" fill="#a855f7" opacity="0.8" />
+  <path d="M220 90 L221 94 L225 95 L221 96 L220 100 L219 96 L215 95 L219 94 Z" fill="#38bdf8" />
+
+  <!-- Shadow under desk -->
+  <ellipse cx="300" cy="455" rx="230" ry="20" fill="#0f172a" opacity="0.15" />
+
+  <!-- Study Desk -->
+  <g filter="url(#softShadow)">
+    <!-- Desk Top Surface -->
+    <rect x="70" y="340" width="460" height="18" rx="8" fill="url(#deskGrad)" stroke="#cbd5e1" stroke-width="2" />
+    <!-- Desk Legs -->
+    <rect x="110" y="358" width="12" height="95" rx="4" fill="#94a3b8" />
+    <rect x="478" y="358" width="12" height="95" rx="4" fill="#94a3b8" />
+    <line x1="110" y1="410" x2="490" y2="410" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round" />
+  </g>
+
+  <!-- Bookshelf / Stack on Desk (Right side) -->
+  <g transform="translate(410, 240)" filter="url(#softShadow)">
+    <!-- Book 1 (Bottom - Blue) -->
+    <rect x="0" y="76" width="90" height="22" rx="4" fill="#3b82f6" />
+    <rect x="8" y="79" width="78" height="16" fill="#f8fafc" />
+    <line x1="16" y1="87" x2="75" y2="87" stroke="#cbd5e1" stroke-width="2" />
+
+    <!-- Book 2 (Middle - Emerald) -->
+    <rect x="5" y="52" width="80" height="20" rx="4" fill="#10b981" />
+    <rect x="12" y="55" width="68" height="14" fill="#f8fafc" />
+    <line x1="20" y1="62" x2="68" y2="62" stroke="#cbd5e1" stroke-width="2" />
+
+    <!-- Book 3 (Top - Coral Pink) -->
+    <rect x="12" y="30" width="70" height="18" rx="4" fill="#f43f5e" />
+    <rect x="18" y="33" width="58" height="12" fill="#f8fafc" />
+
+    <!-- Cute Small Plant on top of books -->
+    <path d="M42 20 L52 20 L49 30 L45 30 Z" fill="#d97706" />
+    <ellipse cx="47" cy="13" rx="6" ry="9" fill="#22c55e" />
+    <ellipse cx="40" cy="15" rx="5" ry="7" transform="rotate(-30 40 15)" fill="#16a34a" />
+    <ellipse cx="54" cy="15" rx="5" ry="7" transform="rotate(30 54 15)" fill="#16a34a" />
+  </g>
+
+  <!-- Desk Lamp (Left side) with cozy warm cone of light -->
+  <g transform="translate(100, 190)" filter="url(#softShadow)">
+    <!-- Lamp base -->
+    <ellipse cx="40" cy="148" rx="22" ry="6" fill="#64748b" />
+    <!-- Curved arm -->
+    <path d="M40 148 Q 20 60, 65 50" stroke="#475569" stroke-width="5" fill="none" stroke-linecap="round" />
+    <circle cx="65" cy="50" r="5" fill="#f59e0b" />
+    <!-- Lamp head/shade -->
+    <path d="M55 42 L85 58 L72 75 L45 56 Z" fill="#8b5cf6" />
+    
+    <!-- Light Beam projection -->
+    <polygon points="50,60 180,150 100,150" fill="url(#lampLight)" />
+  </g>
+
+  <!-- Cup of Coffee/Tea with Steam -->
+  <g transform="translate(195, 305)">
+    <rect x="0" y="10" width="22" height="24" rx="4" fill="#f43f5e" />
+    <path d="M22 15 C28 15, 28 25, 22 25" stroke="#f43f5e" stroke-width="3" fill="none" />
+    <!-- Steam waves -->
+    <path d="M6 5 Q 8 0, 6 -5" stroke="#cbd5e1" stroke-width="1.5" fill="none" stroke-linecap="round" />
+    <path d="M14 5 Q 16 0, 14 -5" stroke="#cbd5e1" stroke-width="1.5" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Open Laptop on Desk -->
+  <g transform="translate(240, 275)" filter="url(#softShadow)">
+    <!-- Laptop Base -->
+    <rect x="-15" y="62" width="140" height="6" rx="3" fill="#94a3b8" />
+    <!-- Laptop Screen -->
+    <polygon points="5,8 105,8 115,62 -5,62" fill="#334155" rx="4" />
+    <polygon points="10,12 100,12 108,58 2,58" fill="#f1f5f9" />
+    <!-- Code / Notes on Screen -->
+    <rect x="15" y="22" width="45" height="4" rx="2" fill="#a855f7" />
+    <rect x="15" y="30" width="60" height="4" rx="2" fill="#38bdf8" />
+    <rect x="15" y="38" width="50" height="4" rx="2" fill="#94a3b8" />
+    <!-- Small colorful chart on screen -->
+    <rect x="75" y="38" width="6" height="12" rx="1" fill="#ec4899" />
+    <rect x="83" y="32" width="6" height="18" rx="1" fill="#8b5cf6" />
+    <rect x="91" y="26" width="6" height="24" rx="1" fill="#3b82f6" />
+  </g>
+
+  <!-- THE STUDYING GIRL -->
+  <g filter="url(#softShadow)">
+    <!-- Chair back -->
+    <rect x="295" y="200" width="70" height="110" rx="12" fill="#64748b" />
+    <rect x="302" y="208" width="56" height="94" rx="8" fill="#475569" />
+
+    <!-- Back hair layer -->
+    <path d="M285 140 Q 330 90, 375 140 Q 395 210, 370 250 Q 325 260, 290 240 Z" fill="url(#hairGrad)" />
+
+    <!-- Body / Cozy Purple Sweater -->
+    <path d="M280 230 C270 215, 380 215, 375 230 L395 345 L260 345 Z" fill="url(#sweaterGrad)" />
+    <!-- Sweater collar -->
+    <ellipse cx="328" cy="225" rx="26" ry="12" fill="#6b21a8" />
+    <ellipse cx="328" cy="225" rx="20" ry="8" fill="#fcd34d" />
+
+    <!-- Neck -->
+    <rect x="318" y="205" width="20" height="24" rx="6" fill="#fcd34d" />
+
+    <!-- Head / Face (profile / 3/4 studying angle) -->
+    <ellipse cx="328" cy="165" rx="36" ry="42" fill="#fcd34d" />
+
+    <!-- Cute Cheeks blush -->
+    <ellipse cx="310" cy="178" rx="8" ry="5" fill="#f87171" opacity="0.45" />
+
+    <!-- Closed / Focused Eyes (studying concentration) -->
+    <path d="M302 165 Q 310 172, 318 165" stroke="#451a03" stroke-width="3" stroke-linecap="round" fill="none" />
+    <!-- Eyebrows -->
+    <path d="M300 155 Q 310 152, 320 157" stroke="#451a03" stroke-width="2.5" stroke-linecap="round" fill="none" />
+    <!-- Cute glasses -->
+    <circle cx="310" cy="166" r="14" stroke="#7c3aed" stroke-width="2.5" fill="#ffffff" fill-opacity="0.2" />
+    <path d="M324 164 L336 164" stroke="#7c3aed" stroke-width="2" />
+
+    <!-- Nose & Smile -->
+    <path d="M298 172 Q 296 177, 302 178" stroke="#d97706" stroke-width="2" fill="none" stroke-linecap="round" />
+    <path d="M304 186 Q 312 192, 320 186" stroke="#b45309" stroke-width="2" stroke-linecap="round" fill="none" />
+
+    <!-- Front Hair Style & Bangs -->
+    <path d="M292 142 C310 120, 360 120, 366 148 C340 135, 315 140, 292 160 Z" fill="url(#hairGrad)" />
+    <!-- Side ponytail / bun with purple scrunchie -->
+    <circle cx="372" cy="130" r="12" fill="#a855f7" />
+    <ellipse cx="388" cy="142" rx="20" ry="28" transform="rotate(25 388 142)" fill="url(#hairGrad)" />
+
+    <!-- Left Arm leaning on desk taking notes -->
+    <path d="M280 235 Q 240 270, 255 335 L280 335 Q 275 275, 300 245 Z" fill="url(#sweaterGrad)" />
+    <ellipse cx="260" cy="336" rx="10" ry="8" fill="#fcd34d" />
+
+    <!-- Right Arm holding pen over notebook -->
+    <path d="M370 240 Q 395 280, 375 330 L350 330 Q 365 280, 350 245 Z" fill="url(#sweaterGrad)" />
+    <ellipse cx="370" cy="330" rx="9" ry="8" fill="#fcd34d" />
+    <!-- Pen in hand -->
+    <line x1="365" y1="322" x2="385" y2="340" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+  </g>
+
+  <!-- Open Notebook in front of girl -->
+  <g transform="translate(325, 332)">
+    <!-- Left Page -->
+    <polygon points="0,0 45,-4 42,16 -2,20" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
+    <line x1="8" y1="4" x2="38" y2="1" stroke="#94a3b8" stroke-width="1.5" />
+    <line x1="6" y1="9" x2="36" y2="6" stroke="#94a3b8" stroke-width="1.5" />
+    <!-- Right Page -->
+    <polygon points="45,-4 90,0 88,20 42,16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <line x1="50" y1="1" x2="80" y2="4" stroke="#94a3b8" stroke-width="1.5" />
+    <line x1="48" y1="6" x2="78" y2="9" stroke="#94a3b8" stroke-width="1.5" />
+    <!-- Spine center -->
+    <line x1="45" y1="-4" x2="42" y2="16" stroke="#8b5cf6" stroke-width="2" />
+  </g>
+</svg>
